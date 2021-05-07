@@ -1,10 +1,13 @@
 const wyrazy: Array<string> = ['ala','tekst','zaraz','test','radar','zakaz','nie','sos'];
 
-console.log("Palindromy w tablicy:")
+console.log("Palindromy w tablicy:");
+WypiszPalindromy();
 
-for (let i = 0; i < wyrazy.length; i++){
-    let odworconyWyraz: string=wyrazy[i]
-    if (odworconyWyraz.split('').reverse().join('') == odworconyWyraz){
-        console.log('-',odworconyWyraz)
-  }
+function WypiszPalindromy(){
+    for (let i = 0; i < wyrazy.length; i++){
+        let odworconyWyraz: string=wyrazy[i]
+        if (odworconyWyraz.split('').reverse().join('') == odworconyWyraz){
+            console.log('-',odworconyWyraz)
+        }
+    }
 }
