@@ -5,7 +5,7 @@ for (var i = 0; i < liczby.length; i++) {
     var silnia = 1;
     Silnia(liczba, silnia);
     function Silnia(liczba, silnia) {
-        for (var z = 0; z > liczba; z++) {
+        for (var z = liczba; z > 1; z--) {
             silnia = silnia * z;
         }
         console.log(silnia);
