@@ -1,14 +1,18 @@
-var liczby = [3, 5, 15, 6, 10, 30, 12, 20];
-var dzielniki = [3, 5, 15];
-for (var i = 0; i < liczby.length; i++) {
-    var liczba = liczby[i];
-    console.log('Dzielniki liczby', liczba);
-    for (var i_1 = 0; i_1 < dzielniki.length; i_1++) {
-        var dzielnik = dzielniki[i_1];
-        WyznaczDzielnik(liczba, dzielnik);
-        function WyznaczDzielnik(liczba, dzielnik) {
-            if (liczba % dzielnik == 0)
-                console.log('-', dzielnik);
+var dzielniki = [3, 5];
+for (var i = 1; i <= 100; i++) {
+    var liczba = i;
+    var dzielnik1 = dzielniki[0];
+    var dzielnik2 = dzielniki[1];
+    WyznaczDzielnik(liczba, dzielnik1, dzielnik2);
+    function WyznaczDzielnik(liczba, dzielnik1, dzielnik2) {
+        if (liczba % dzielnik1 === 0 && liczba % dzielnik2 !== 0) {
+            console.log("Liczba:", liczba, '- Fizz');
+        }
+        if (liczba % dzielnik2 === 0 && liczba % dzielnik1 !== 0) {
+            console.log("Liczba:", liczba, '- Buzz');
+        }
+        if (liczba % dzielnik1 === 0 && liczba % dzielnik2 === 0) {
+            console.log("Liczba:", liczba, '- FizzBuzz');
         }
     }
 }
