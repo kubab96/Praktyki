@@ -1,2 +1,0 @@
-Kompilacja na plik JavaScript - tsc NazwaFolderu/NazwaPliku.ts - tsc src/delta.ts | tsc src/palindrom.ts
-Uruchomienie pliku JavaScript - node NazwaFolderu/NazwaPliku.js - node src/delta.js | node src/palindrom.js

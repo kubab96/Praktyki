@@ -1,27 +1,27 @@
-function ObliczDelte(a: number, b: number, c: number) {
-    console.log('---------------------------------------------------');
-    console.log('Liczby w działaniu: a =', a, '| b =', b, '| c =', c);
+function obliczDelte(a: number, b: number, c: number) {
+    console.log(`---------------------------------------------------`);
+    console.log(`Liczba w działaniu: a = ${a} | b = ${b} | c = ${c}`);
 
     const delta = Math.pow(b, 2) - 4 * a * c;
-    console.log('Delta wynosi', delta);
+    console.log(`Delta wynosi: ${delta}`);
 
-    WyznaczMiejscaZerowe(delta, a, b)
+    wyznaczMiejscaZerowe(delta, a, b)
 }
 
-function WyznaczMiejscaZerowe(delta: number, a: number, b: number) {
+function wyznaczMiejscaZerowe(delta: number, a: number, b: number) {
     if (delta > 0) {
-        console.log('Delta > 0');
+        console.log(`Delta > 0`);
         const x1 = (-b - Math.sqrt(delta)) / (2 * a);
         const x2 = (-b + Math.sqrt(delta)) / (2 * a);
-        console.log('Pierwsze miejsce zerowe:', Math.round(x1));
-        console.log('Drugie miejsce zerowe:', Math.round(x2));
+        console.log(`Pierwsze miejsce zerowe: ${Math.round(x1)}`);
+        console.log(`Drugie miejsce zerowe: ${Math.round(x2)}`);
     } else if (delta === 0) {
-        console.log('Delta = 0');
+        console.log(`Delta = 0`);
         const x = -b / 2 * a;
-        console.log('Miejsce zerowe:', Math.round(x));
+        console.log(`Miejsce zerowe: ${Math.round(x)}`);
     } else if (delta < 0) {
-        console.log('Delta < 0');
-        console.log('Brak miejsc zerowych');
+        console.log(`Delta < 0`);
+        console.log(`Brak miejsc zerowych`);
     }
 }
 
@@ -32,6 +32,6 @@ for (let i = 0; i < dane.length / 3; i++) {
     const elementB: number = dane[1 + 3 * i];
     const elementC: number = dane[2 + 3 * i];
 
-    ObliczDelte(elementA, elementB, elementC);
+    obliczDelte(elementA, elementB, elementC);
 }
 
