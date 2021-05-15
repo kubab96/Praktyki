@@ -1,18 +1,20 @@
 "use strict";
-function wyznaczCiag(ilosc, liczba, liczba2) {
-    for (var z = 0; z < ilosc; z++) {
-        var wynik = liczba + liczba2;
-        console.log(wynik);
-        liczba2 = wynik;
-        liczba = wynik - liczba;
-    }
-    console.log('----------------------------');
+function wyznaczCiag(liczba) {
+    if (liczba === 0)
+        return 0;
+    if (liczba === 1)
+        return 1;
+    return wyznaczCiag(liczba - 1) + wyznaczCiag(liczba - 2);
 }
-var liczby = [1, 2, 10, 15, 20];
+/*  dla 3
+    input: 3-1     +       3-2
+           (2)             [1]
+        2-1 + 2-2
+        [1]   [0]
+    output: 1+0+1=2
+ */
+var liczby = [0, 1, 2, 3, 4, 5, 10, 15, 20];
 for (var i = 0; i < liczby.length; i++) {
     var liczba = liczby[i];
-    var liczba2 = liczba;
-    console.log('Kolejne liczby ciągu dla', liczba);
-    wyznaczCiag(5, liczba, liczba2);
-    // ilosc = ilosc powtorzen ciagu
+    console.log(liczba + " wyraz ci\u0105gu: " + wyznaczCiag(liczba));
 }
