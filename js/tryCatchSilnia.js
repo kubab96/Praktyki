@@ -2,14 +2,14 @@
 function obliczSilnieTry(liczba, silnia) {
     try {
         if (liczba < 0)
-            throw "";
+            throw new Error("Liczba mniejsza niż 0, wpisz liczbę całkowitą nieujemną.");
         for (var z = liczba; z > 1; z--) {
             silnia = silnia * z;
         }
         console.log("Silnia liczby " + liczba + " wynosi: " + silnia);
     }
-    catch (_a) {
-        console.log("Liczba mniejsza ni\u017C 0, wpisz liczb\u0119 ca\u0142kowit\u0105 nieujemn\u0105.");
+    catch (e) {
+        console.log(e);
     }
 }
 var liczbySilniaTry = [1, 3, -5, -89, 10, 5, -67];

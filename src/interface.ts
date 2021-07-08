@@ -1,7 +1,3 @@
-function giveBirth(child: IPerson) {
-  return child;
-}
-
 interface IAnimal {
   weight: number;
   height: number;

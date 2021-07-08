@@ -2,12 +2,12 @@
 function dzielenie(dzielnia, dzielnik) {
     try {
         if (dzielnik === 0 || dzielnia === 0)
-            throw "";
+            throw new Error(dzielnia + " : " + dzielnik + " = Pami\u0119taj cholero nie dziel przez zero");
         var wynik = dzielnia / dzielnik;
         console.log(dzielnia + " : " + dzielnik + " = " + wynik);
     }
-    catch (_a) {
-        console.log(dzielnia + " : " + dzielnik + " = Pami\u0119taj cholero nie dziel przez zero");
+    catch (e) {
+        console.log(e);
     }
 }
 var dzielniaTab = [1, 245, 2, 55, 6, 25, 8, 0];

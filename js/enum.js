@@ -28,4 +28,4 @@ var Status;
     Status[Status["Not Found"] = 404] = "Not Found";
     Status[Status["Server Error"] = 500] = "Server Error";
 })(Status || (Status = {}));
-codeStatus(424);
+codeStatus(404);

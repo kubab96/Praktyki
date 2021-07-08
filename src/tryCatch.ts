@@ -1,12 +1,13 @@
 function dzielenie(dzielnia: number, dzielnik: number) {
   try {
-    if (dzielnik === 0 || dzielnia === 0) throw ``;
+    if (dzielnik === 0 || dzielnia === 0)
+      throw new Error(
+        `${dzielnia} : ${dzielnik} = Pamiętaj cholero nie dziel przez zero`
+      );
     const wynik = dzielnia / dzielnik;
     console.log(`${dzielnia} : ${dzielnik} = ${wynik}`);
-  } catch {
-    console.log(
-      `${dzielnia} : ${dzielnik} = Pamiętaj cholero nie dziel przez zero`
-    );
+  } catch (e) {
+    console.log(e);
   }
 }
 

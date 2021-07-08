@@ -28,4 +28,4 @@ enum Status {
   "Server Error" = 500,
 }
 
-codeStatus(424);
+codeStatus(404);
